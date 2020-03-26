@@ -1,0 +1,42 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet" />
+    <!-- <link href="https://unpkg.com/@videojs/themes@1/dist/forest/index.css" rel="stylesheet"/> -->
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@523&display=swap" rel="stylesheet">
+    <link href="./css/app.css" rel="stylesheet" />
+  </head>
+
+  <body class="player">
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading video-name">Loading...</h1>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card shadow p-3 mb-5 bg-white rounded">
+            <div class="card-body">
+              <video id="ux-video" class="video-js vjs-default-skin vjs-big-play-centered">
+                <source src type="video/mp4" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that
+                  <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://vjs.zencdn.net/7.7.5/video.js"></script>
+    <script src="./js/player.js" type="module"></script>
+
+  </body>
+
+</html>

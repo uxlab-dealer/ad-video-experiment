@@ -1,0 +1,57 @@
+
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@523&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="./css/app.css" rel="stylesheet"/>
+
+  </head>
+<body data-gr-c-s-loaded="true">
+    <main role="main" class="index">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">UX Video Experiment - Page 1</h1>
+          <p class="lead text-muted">Select a video below to begin</p>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row card-container">
+
+            <script id="card-template" type="x-tmpl-mustache">
+              {{#arr}}
+              <div class="col-md-4">
+                <div class="card card-{{id}} p-3 mb-5 shadow">
+                  <img class="card-img-top img-responsive" src={{imgSrc}} alt="Video Thumbnail"/>
+                  <div class="card-body">
+                    <p class="card-text">{{name}}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <button type="button" class="view-btn btn btn-sm btn-outline-secondary" data-videoIndex={{id}}>View</button>
+                      <small class="text-muted">{{time}}</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {{/arr}}
+            </script>
+
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img class="ux-logo logo" src="./img/ddc ux black.png"/>
+          </div>
+          <div class="col-md-6">
+            <img class="ddc-logo logo" src="./img/ddc logo black.png"/>
+          <div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/mustache@latest"></script>
+    <script src="./js/index.js" type="module"></script>
+    </body>
+</html>
