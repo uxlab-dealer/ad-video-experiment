@@ -15,14 +15,13 @@ const loadVideoSource = (vidSrc) => {
   vidPlayer.src({
     type: 'video/mp4',
     //src: "../videos/" + vidSrc + ".mp4"
-    src: "https://coxautoinc-my.sharepoint.com/:v:/r/personal/jeffrey_pierce_coxautoinc_com/Documents/videos/" + vidSrc + ".mp4"
+    src: "https://dl.dropbox.com/s/" + vidSrc + ".mp4?dl=0"
   });
 
-  vidPlayer.on('pause', function() {
+  vidPlayer.on('pause', () => {
     this.bigPlayButton.show();
 
-
-    vidPlayer.on('play', function() {
+    vidPlayer.on('play', () => {
       this.bigPlayButton.hide();
     });
   });
@@ -30,7 +29,10 @@ const loadVideoSource = (vidSrc) => {
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const vidId = methods.getURLParam('vidId');
+
   let vidName = data.arr.find(x => x.id == vidId).name;
   document.querySelector('.video-name').innerHTML = vidName;
-  loadVideoSource(methods.slugify(vidName));
+
+  let vidSource = data.arr.find(x => x.id == vidId).dbPath;
+  loadVideoSource(vidSource);
 });
