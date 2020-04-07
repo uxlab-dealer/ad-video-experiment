@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   let dataGroup
   let title = document.querySelector(".jumbotron-heading");
   if (methods.getURLParam('groupId') == 2 ){
-    dataGroup = data.arr.slice(12);
+    dataGroup = data.arr.slice(11);
     title.innerHTML = "UX Video Experiment - Page 2";
   } else {
-    dataGroup = data.arr.slice(0, 11);
+    dataGroup = data.arr.slice(0, 10);
   }
 
   const addImgName = (item) =>
