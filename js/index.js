@@ -9,14 +9,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
   } else {
     dataGroup = data.arr.slice(0, 11);
   }
-  console.log(dataGroup);
 
   const addImgName = (item) =>
     item.imgSrc = "./img/" + methods.slugify(item.name) + ".png"
   dataGroup.forEach(addImgName);
 
   dataGroup = {arr:dataGroup};
-  console.log(dataGroup);
   let template = document.getElementById('card-template').innerHTML;
   let rendered = Mustache.render(template, dataGroup);
 
